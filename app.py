@@ -13,8 +13,8 @@ def load_model():
     # Update the path to look for the .pkl file
     model_path = "logistic_regression_model.pkl" 
     if os.path.exists(model_path):
-        with open(model_path, 'rb') as file:
-            return pickle.load(file)
+        with open(model_path, 'rb') as f:
+            return pickle.load(f)
     else:
         st.error(f"Model file '{model_path}' not found!")
         return None
